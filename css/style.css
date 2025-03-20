@@ -1,0 +1,125 @@
+/*
+CSS RESETS:
+ Border box reset:
+https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ 62.5% Fix: https: //www.aleksandrhovhannisyan.com/blog/62-5-percent-font-size-trick/
+*/
+
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+ }
+ 
+ 
+ *,
+ *:before,
+ *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+ }
+ 
+ 
+ html,
+ body {
+    height: 100%;
+ }
+ 
+ 
+ body {
+    font-size: 1.6rem;
+    /* font-size 1.6rem is now the same as 16px */
+    line-height: 1.6;
+ }
+
+ .content-wrapper {
+   flex: 1 0 auto;
+   margin: 0 auto;
+   display: flex;
+   padding: 30px;
+   max-width: 900px;
+   flex-direction: column;
+}
+ 
+ .topbar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0 20px;
+   background-color: rgb(216, 216, 216, 0.5);
+   color: #000000;
+ }
+
+ .name a {
+   color: #000000;
+   text-decoration: none;
+   font-size: 24px;
+ }
+
+ /* nav stuff */
+
+ .nav-links {
+   display: flex;
+   list-style: none;
+ }
+ 
+ .nav-links li {
+   margin: 20px 40px;
+   width: 50px;
+ }
+ 
+ .nav-links a {
+   color: #000000;
+   font-size: 18px;
+   transition: color 0.3s, text-decoration 0.3s, background-color 0.3s;
+   padding: 5px 10px;
+ }
+ 
+ .nav-links a:hover,
+ .nav-links a.active {
+   color: #e0e0e0;
+   background-color: #8d388d;
+   border-radius: 4px;
+ }
+
+ /* footer stuff */
+
+ footer {
+   background: rgb(216, 216, 216, 0.5);
+   color: rgb(0, 0, 0)
+}
+
+.socials {
+   list-style-type: none;
+   padding: 0;
+}
+
+.socials li {
+   display: inline-block;
+   margin-left: 5px;
+}
+
+.socials img {
+   width: 32px;
+}
+
+.socials img:hover {
+   opacity: 0.5;
+}
+
+
+@media screen and (min-width: 860px) {
+   footer {
+       display: flexbox;
+       justify-content: space-between;
+       padding: 0 20px;
+   }
+}
+
+@media screen and (max-width: 859px) {
+   footer {
+       text-align: center;
+       padding: 10px;
+   }
+}
