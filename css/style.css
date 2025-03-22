@@ -52,6 +52,12 @@ html {
    opacity: 0.5;
  }
 
+ #canvas {
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+}
+
  .content-wrapper {
    flex: 1 0 auto;
    margin: 0 auto;
